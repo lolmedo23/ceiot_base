@@ -25,6 +25,7 @@
 #include <bmp280.h>
 #include "/home/lucas/esp/ceiot_base/config/config.h"   // esto es mejorable...
 
+
 /* Constants that aren't configurable in menuconfig */
 #define WEB_SERVER API_IP
 #define WEB_PORT API_PORT
@@ -32,7 +33,7 @@
 
 #define SDA_GPIO 4
 #define SCL_GPIO 5
-#define APIKEY 15
+#define APIKEY "keyDev_11"
 
 
 
@@ -47,9 +48,10 @@ static char *REQUEST_POST = "POST " WEB_PATH " HTTP/1.0\r\n"
     "Host: "WEB_SERVER":"WEB_PORT"\r\n"
     "User-Agent: esp-idf/1.0 esp32c3 devkitC\r\n"
     "Content-Type: application/x-www-form-urlencoded\r\n"
-    "Content-Length: 35\r\n"
+    //"Content-Type: application/json\r\n"
+    "Content-Length: 70\r\n"
     "\r\n"
-    "id=" DEVICE_ID "&key=%d&t=%0.2f&h=%0.2f&p=%0.2f";
+     "device={\"id\":" DEVICE_ID ",\"key\": \"" APIKEY "\",\"temp\":%0.2f,\"h\":%0.2f,\"p\":%0.2f}";
 
 static void http_get_task(void *pvParameters)
 {
@@ -62,7 +64,7 @@ static void http_get_task(void *pvParameters)
     int s, r;
     char recv_buf[64];
 
-    char send_buf[256];
+    char send_buf[512];
 
     bmp280_params_t params;
     bmp280_init_default_params(&params);
@@ -83,7 +85,7 @@ static void http_get_task(void *pvParameters)
             	ESP_LOGI(TAG, "Pressure: %.2f Pa, Temperature: %.2f C", pressure, temperature);
 //            if (bme280p) {
                 ESP_LOGI(TAG,", Humidity: %.2f\n", humidity);
-                sprintf(send_buf, REQUEST_POST, APIKEY, temperature , humidity , pressure);
+                sprintf(send_buf, REQUEST_POST, temperature , humidity , pressure);
 //	    } else {
 //                sprintf(send_buf, REQUEST_POST, temperature , 0);
 //            }
