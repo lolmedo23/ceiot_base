@@ -1,4 +1,15 @@
-### Introducción 
+
+Ejercicio CiberKillChain - Ataque
+=====================================
+### Alumno
+
+	 Olmedo Lucas Eduardo
+
+### Enunciado
+
+	Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenario relacionado a tu trabajo práctico
+
+### Datos trabajo práctico
 
 Según lo acordado con el profesor, se utiliza el Trabajo final “Comunicador para centrales de alarma” de Mariano Mondani ya que todavía no tengo definido trabajo final para la especialidad. 
 
@@ -23,6 +34,9 @@ Tecnología del frontend:
 	Ionic Framework y Capacitor
 
 El objetivo del informe es aplicar Cyber kill chain para lograr controlar y deshabilitar una o mas alarmas x28 por medio del comunicador wifi. 
+
+Resolución
+==========
 
 ###  1- Reconnaissance
  Se investiga comprando un dispositivo y leyendo los manuales. También se investiga información del funcionamiento en internet y se encuentra ciertos detalles del funcionamiento. 
