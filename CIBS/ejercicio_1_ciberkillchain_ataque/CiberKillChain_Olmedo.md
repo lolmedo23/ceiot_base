@@ -42,7 +42,7 @@ El objetivo del informe es aplicar Cyber kill chain para lograr controlar y desh
 ###  4-Exploitation 
 
 - Accediendo a las contraseñas de la aplicación que controla el comunicador de un cliente. El atacante puede instalarse la aplicación para supervisar y controlar el estado de esa alarma en particular. 
--Luego de tener acceso a AWS el atacante puede modificar los accesos, analizar  el sistema y generar o modificar funciones para controlar las alarmas, por ejemplo deshabilitar todas las alarmas activadas. En caso de lograr obtener base de datos con contraseñas de controladores, el atacante resguarda esos datos. 
+- Luego de tener acceso a AWS el atacante puede modificar los accesos, analizar  el sistema y generar o modificar funciones para controlar las alarmas, por ejemplo deshabilitar todas las alarmas activadas. En caso de lograr obtener base de datos con contraseñas de controladores, el atacante resguarda esos datos. 
 
 ###  5-Installation
 
