@@ -40,22 +40,26 @@ Resolución
 
 ###  1- Reconnaissance
  Se investiga comprando un dispositivo y leyendo los manuales. También se investiga información del funcionamiento en internet y se encuentra ciertos detalles del funcionamiento. 
-- Se plantea un ataque intentando obtener información desde los clientes de las alarmas, el objetivo es información de contraseñas de la app para controlar la alarma. Es necesario detectar clientes objetivos. 
+- Se plantea un ataque intentando obtener información desde los clientes de las alarmas, el objetivo es información de contraseñas de la app para controlar la alarma. Es necesario detectar clientes objetivos, para ello se utilizan redes sociales, seguir redes sociales de la empresa y analizar sus seguidores ya que los mismos pueden ser empleados o usuarios. 
 - Se plantea utilizar analizadores de protocolos de paquetes o intentar por algún acercamiento con los empleados de X28 para obtener las contraseñas de AWS que controlan el sistema. 
 
 ###  2- Weaponization 
 
 - Ataque interceptando las redes de los clientes para obtener credenciales con programas como Wireshark para analizar el trafico de datos e intentar obtener las contraseñas de la app para comandar la alarma.
-- Se utilizan técnicas de pishing tanto para los clientes de las alarmas (para obtener acceso al control de su alarma) como para los empleados de X28 para poder obtener acceso a las cuantas de AWS que controlan el sistema de las alarmas. 
+- Se utilizan técnicas de phishing tanto para los clientes de las alarmas (para obtener acceso al control de su alarma) como para los empleados de X28 para poder obtener acceso a las cuentas de AWS que controlan el sistema de las alarmas. 
+-Crear cuentas falsas en redes sociales para seguir a los posibles objetivos. 
+-Generar correos y/o  mensajes para phishing.
+
 
 ###  3-Delivery 
 
 - Contactar por redes sociales a clientes y empleados de x28 para obtener información y lograr obtener las contraseñas de aplicaciones del controlador o de AWS. 
--Accediendo a las contraseñas de la cuenta AWS, el atacante podrá analizar y estudiar el sistema para luego modificar el comportamiento, controlando las alarmas que desea. 
+- Enviar mensajes para atacar por phishing o smishing.
 
 ###  4-Exploitation 
 
-- Accediendo a las contraseñas de la aplicación que controla el comunicador de un cliente. El atacante puede instalarse la aplicación para supervisar y controlar el estado de esa alarma en particular. 
+- Algunos clientes proveen las contraseñas de la aplicación que controla el comunicador de un cliente. El atacante puede instalarse la aplicación para supervisar y controlar el estado de esa alarma en particular. 
+-Algun empleado provee la contraseña de la cuenta AWS, el atacante podrá analizar y estudiar el sistema para luego modificar el comportamiento, controlando las alarmas que desea. 
 - Luego de tener acceso a AWS el atacante puede modificar los accesos, analizar  el sistema y generar o modificar funciones para controlar las alarmas, por ejemplo deshabilitar todas las alarmas activadas. En caso de lograr obtener base de datos con contraseñas de controladores, el atacante resguarda esos datos. 
 
 ###  5-Installation
