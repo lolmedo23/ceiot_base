@@ -45,7 +45,7 @@ Resolución
 
 ###  2- Weaponization 
 
-- Ataque interceptando las redes de los clientes para obtener credenciales con programas como Wireshark para analizar el trafico de datos e intentar obtener las contraseñas de la app para comandar la alarma.
+- Interceptando las redes de los clientes para obtener credenciales con programas como Wireshark para analizar el trafico de datos e intentar obtener las contraseñas de la app para comandar la alarma.
 - Se utilizan técnicas de phishing tanto para los clientes de las alarmas (para obtener acceso al control de su alarma) como para los empleados de X28 para poder obtener acceso a las cuentas de AWS que controlan el sistema de las alarmas. 
 -Crear cuentas falsas en redes sociales para seguir a los posibles objetivos. 
 -Generar correos y/o  mensajes para phishing.
@@ -55,6 +55,7 @@ Resolución
 
 - Contactar por redes sociales a clientes y empleados de x28 para obtener información y lograr obtener las contraseñas de aplicaciones del controlador o de AWS. 
 - Enviar mensajes para atacar por phishing o smishing.
+- Ejecutar analizadores de protocolos en casas con la alarma y en la empresa
 
 ###  4-Exploitation 
 
@@ -63,14 +64,13 @@ Resolución
 - Luego de tener acceso a AWS el atacante puede modificar los accesos, analizar  el sistema y generar o modificar funciones para controlar las alarmas, por ejemplo deshabilitar todas las alarmas activadas. En caso de lograr obtener base de datos con contraseñas de controladores, el atacante resguarda esos datos. 
 
 ###  5-Installation
-
-- En el caso de obtener las contraseñas de la app de un controlador en particular, el atacante debe realizar la instalación de la app en un celular y asociar un controlador con las contraseñas.
--Para AWS, el cliente debería habilitar todo los accesos que pueda sin que la victima logre detectarlos y que en caso de detectarlos le quede alguna forma de acceder. 
+- Al tener las contraseñas ya no es necesaria una instalacion
 
 ###  6- Command & Control
-
+- En el caso de obtener las contraseñas de la app de un controlador en particular, el atacante debe realizar la instalación de la app en un celular y asociar un controlador con las contraseñas.
 - El atacante puede enviar mensajes desde la aplicación instalada para activar y desactivar la alarma en momentos en que el usuario de la alarma no lo detecte.
--El atacante puede obtener todos los datos de usuarios y contraseña de las aplicaciones de los usuarios desde AWS. 
+- Para AWS, el cliente debería habilitar todo los accesos que pueda sin que la victima logre detectarlos y que en caso de detectarlos le quede alguna forma de acceder. 
+- El atacante puede obtener todos los datos de usuarios y contraseña de las aplicaciones de los usuarios desde AWS. 
 
 ###  7- Actions on Objectives
 
